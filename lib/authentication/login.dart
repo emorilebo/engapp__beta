@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:engapp__beta/widgets/custom_text_field.dart';
 import 'package:engapp__beta/widgets/error_dialog.dart';
+import 'package:engapp__beta/widgets/loading_dialog.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
