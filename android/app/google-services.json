@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "160303850098",
+    "project_id": "engapp--beta",
+    "storage_bucket": "engapp--beta.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160303850098:android:ce67d1834d888e0e22d8eb",
+        "android_client_info": {
+          "package_name": "com.cruxifixur.engapp__beta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "160303850098-don4ehdedgjjh32jfe50llpkh8007eg3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDXTi_zSrLchHA1WzjM_O5n6a_qz4R4vc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "160303850098-don4ehdedgjjh32jfe50llpkh8007eg3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
