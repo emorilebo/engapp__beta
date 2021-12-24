@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:engapp__beta/mainScreens/home_screen.dart';
 import 'package:engapp__beta/widgets/custom_text_field.dart';
 import 'package:engapp__beta/widgets/error_dialog.dart';
 import 'package:engapp__beta/widgets/loading_dialog.dart';
@@ -70,18 +71,18 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Future readDataAndSetDataLocally(User currentUser) async {
     await FirebaseFirestore.instance
-        .collection("sellers")
+        .collection("users")
         .doc(currentUser.uid)
         .get()
         .then((snapshot) async {
       if (snapshot.exists) {
         await sharedPreferences!.setString("uid", currentUser.uid);
         await sharedPreferences!
-            .setString("email", snapshot.data()!["sellerEmail"]);
+            .setString("email", snapshot.data()!["userEmail"]);
         await sharedPreferences!
-            .setString("name", snapshot.data()!["sellerName"]);
+            .setString("name", snapshot.data()!["userName"]);
         await sharedPreferences!
-            .setString("photoUrl", snapshot.data()!["sellerAvatarUrl"]);
+            .setString("photoUrl", snapshot.data()!["userAvatarUrl"]);
         Navigator.pop(context);
         Navigator.push(
             context, MaterialPageRoute(builder: (c) => const HomeScreen()));
