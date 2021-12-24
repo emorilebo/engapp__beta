@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:engapp__beta/mainScreens/home_screen.dart';
 import 'package:engapp__beta/widgets/custom_text_field.dart';
 import 'package:engapp__beta/widgets/error_dialog.dart';
 import 'package:engapp__beta/widgets/loading_dialog.dart';
@@ -188,6 +189,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       "lng": position!.longitude,
     });
     //save data locally
+    SharedPreferences? sharedPreferences;
     sharedPreferences = await SharedPreferences.getInstance();
     await sharedPreferences!.setString("uid", currentUser.uid);
     await sharedPreferences!.setString("email", currentUser.email.toString());
