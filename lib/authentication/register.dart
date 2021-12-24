@@ -7,11 +7,6 @@ import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:uber_seller/global/global.dart';
-import 'package:uber_seller/mainScreens/home_screen.dart';
-import 'package:uber_seller/widgets/custom_text_field.dart';
-import 'package:uber_seller/widgets/error_dialog.dart';
-import 'package:uber_seller/widgets/loading_dialog.dart';
 import 'package:firebase_storage/firebase_storage.dart' as fStorage;
 
 class RegisterScreen extends StatefulWidget {
@@ -300,7 +295,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 formValidation();
               },
               child: const Text(
-                "Sign Up as an Engineer",
+                "Sign Up",
                 style:
                     TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
               ),
