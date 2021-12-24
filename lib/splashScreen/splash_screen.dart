@@ -1,6 +1,8 @@
 import 'dart:async';
 
 import 'package:engapp__beta/authentication/auth_screen.dart';
+import 'package:engapp__beta/global/global.dart';
+import 'package:engapp__beta/mainScreens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class MySplashScreen extends StatefulWidget {
@@ -13,9 +15,11 @@ class MySplashScreen extends StatefulWidget {
 class _MySplashScreenState extends State<MySplashScreen> {
   startTimer() {
     Timer(const Duration(seconds: 1), () async {
+      //if user is loggedin already
       if (firebaseAuth.currentUser != null) {
         Navigator.push(
             context, MaterialPageRoute(builder: (c) => const HomeScreen()));
+        //if user is not loggedin already
       } else {
         Navigator.push(
             context, MaterialPageRoute(builder: (c) => const AuthScreen()));
