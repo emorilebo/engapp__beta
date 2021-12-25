@@ -12,7 +12,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: MyDrawer(),
+      // drawer: MyDrawer(),
       appBar: AppBar(
         title: Text(
           sharedPreferences!.getString("name")!,
@@ -23,8 +23,8 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (c) => const MenusUploadScreen()));
+              // Navigator.push(context,
+              //     MaterialPageRoute(builder: (c) => const MenusUploadScreen()));
             },
             icon: const Icon(Icons.post_add, color: Colors.white),
           ),
