@@ -97,7 +97,7 @@ class _LoginScreenState extends State<LoginScreen> {
           context: context,
           builder: (c) {
             return ErrorDialog(
-              message: "No record found, Try Registering",
+              message: "No record found, Try Register",
             );
           },
         );
