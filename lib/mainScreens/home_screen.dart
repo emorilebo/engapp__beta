@@ -15,6 +15,17 @@ class _HomeScreenState extends State<HomeScreen> {
   Completer<GoogleMapController> _controllerGoogleMap = Completer();
   GoogleMapController? newGoogleMapController;
 
+  String? dropdownvalue = 'Civil';
+
+  var items = [
+    'Civil Engineer',
+    'Mechanical Engineer',
+    'Electrical Engineer',
+    'Petrochemical Engineer',
+    'Software Engineer',
+    'Artisan'
+  ];
+
   static final CameraPosition _kGooglePlex = CameraPosition(
     target: LatLng(37.42796133580664, -122.085749655962),
     zoom: 14.4746,
@@ -95,14 +106,51 @@ class _HomeScreenState extends State<HomeScreen> {
                     horizontal: 24.0, vertical: 12.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    SizedBox(height: 6.0),
-                    Text('Hi there,',
+                  children: [
+                    const SizedBox(height: 6.0),
+                    const Text('Hi there,',
                         style:
                             TextStyle(fontSize: 18.0, fontFamily: 'Lobster')),
-                    Text('Looking for an Engineer?',
+                    const Text('Looking for an Engineer?',
                         style:
                             TextStyle(fontSize: 24.0, fontFamily: 'Signatra')),
+                    const SizedBox(
+                      height: 20.0,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(5.0),
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Colors.black54,
+                            blurRadius: 6.0,
+                            spreadRadius: 0.5,
+                            offset: Offset(0.7, 0.7),
+                          ),
+                        ],
+                      ),
+                      child: Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            DropdownButton(
+                              value: dropdownvalue,
+                              icon: const Icon(Icons.keyboard_arrow_down),
+                              items: items.map((String items) {
+                                return DropdownMenuItem(
+                                    value: items, child: Text(items));
+                              }).toList(),
+                              onChanged: (String? newValue) {
+                                setState(() {
+                                  dropdownvalue = newValue;
+                                });
+                              },
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
