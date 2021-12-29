@@ -44,7 +44,7 @@ class _MySplashScreenState extends State<MySplashScreen> {
             children: [
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: Image.asset("images/civil.jpg"),
+                child: Image.asset("images/splash.jpg"),
               ),
               const SizedBox(
                 height: 10,
