@@ -90,14 +90,21 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
-              child: Column(
-                children: [
-                  SizedBox(height: 6.0),
-                  Text('Hi there,',
-                      style: TextStyle(fontSize: 14.0, fontFamily: 'Lobster')),
-                  Text('Looking for an Engineer?',
-                      style: TextStyle(fontSize: 14.0, fontFamily: 'Signatra')),
-                ],
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 24.0, vertical: 12.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    SizedBox(height: 6.0),
+                    Text('Hi there,',
+                        style:
+                            TextStyle(fontSize: 18.0, fontFamily: 'Lobster')),
+                    Text('Looking for an Engineer?',
+                        style:
+                            TextStyle(fontSize: 24.0, fontFamily: 'Signatra')),
+                  ],
+                ),
               ),
             ),
           ),
