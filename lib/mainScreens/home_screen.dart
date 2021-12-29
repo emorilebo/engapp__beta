@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Completer<GoogleMapController> _controllerGoogleMap = Completer();
   GoogleMapController? newGoogleMapController;
 
-  String? dropdownvalue = 'Civil';
+  String? dropdownvalue = 'Civil Engineer';
 
   var items = [
     'Civil Engineer',
@@ -150,6 +150,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           ],
                         ),
                       ),
+                    ),
+                    const SizedBox(
+                      height: 20.0,
                     ),
                   ],
                 ),
