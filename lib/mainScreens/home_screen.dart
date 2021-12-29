@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:engapp__beta/global/global.dart';
+import 'package:engapp__beta/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -14,6 +15,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   Completer<GoogleMapController> _controllerGoogleMap = Completer();
   GoogleMapController? newGoogleMapController;
+  TextEditingController taskDescriptionController = TextEditingController();
 
   String? dropdownvalue = 'Civil Engineer';
 
@@ -153,6 +155,27 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     const SizedBox(
                       height: 20.0,
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(5.0),
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Colors.black54,
+                            blurRadius: 6.0,
+                            spreadRadius: 0.5,
+                            offset: Offset(1.8, 1.8),
+                          ),
+                        ],
+                      ),
+                      child: CustomTextField(
+                        //data: Icons.description,
+                        controller: taskDescriptionController,
+                        hintText:
+                            "Description what you want the engineer to do for you",
+                        isObscure: false,
+                      ),
                     ),
                   ],
                 ),
