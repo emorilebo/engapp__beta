@@ -23,11 +23,15 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       // drawer: MyDrawer(),
-      // appBar: AppBar(
-      //   title: Text(
-      //     sharedPreferences!.getString("name")!,
-      //     style: const TextStyle(fontSize: 30, fontFamily: 'Lobster'),
-      //   ),
+      appBar: AppBar(
+        backgroundColor: Colors.amber,
+        title: const Text(
+          'Welcome to EngApp',
+          style: TextStyle(fontSize: 30, fontFamily: 'Lobster'),
+        ),
+        centerTitle: true,
+        automaticallyImplyLeading: true,
+      ),
       //   centerTitle: true,
       //   automaticallyImplyLeading: true,
       //   actions: [
@@ -54,9 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
       //     ),
       //   ),
       // ),
-      appBar: AppBar(
-        title: Text('Main Screen'),
-      ),
+
       body: Stack(
         children: [
           GoogleMap(
