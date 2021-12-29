@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'global/global.dart';
+import 'mainScreens/home_screen.dart';
 import 'splashScreen/splash_screen.dart';
 
 Future<void> main() async {
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MySplashScreen(),
+      home: const HomeScreen(),
     );
   }
 }
