@@ -77,18 +77,28 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Container(
               height: 260.0,
               decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(18.0),
-                      topRight: Radius.circular(18.0)),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black,
-                      blurRadius: 14.0,
-                      spreadRadius: 0.5,
-                      offset: Offset(0.7, 0.7),
-                    ),
-                  ]),
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(18.0),
+                    topRight: Radius.circular(18.0)),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black,
+                    blurRadius: 14.0,
+                    spreadRadius: 0.5,
+                    offset: Offset(0.7, 0.7),
+                  ),
+                ],
+              ),
+              child: Column(
+                children: [
+                  SizedBox(height: 6.0),
+                  Text('Hi there,',
+                      style: TextStyle(fontSize: 14.0, fontFamily: 'Lobster')),
+                  Text('Looking for an Engineer?',
+                      style: TextStyle(fontSize: 14.0, fontFamily: 'Signatra')),
+                ],
+              ),
             ),
           ),
         ],
