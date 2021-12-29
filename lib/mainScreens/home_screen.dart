@@ -70,6 +70,20 @@ class _HomeScreenState extends State<HomeScreen> {
               newGoogleMapController = controller;
             },
           ),
+          Positioned(
+            left: 0.0,
+            right: 0.0,
+            bottom: 0.0,
+            child: Container(
+              height: 245.0,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(18.0),
+                    topRight: Radius.circular(18.0)),
+              ),
+            ),
+          ),
         ],
       ),
     );
